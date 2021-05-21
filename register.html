@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Projects</title>
+    <!-- Bootrap stylesheet added -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+
+    <!-- bootstrap js  -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+    <script src="https://kit.fontawesome.com/c64dd06511.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
+    <link rel="stylesheet" href="./assets/css/main.css">
+
+
+</head>
+
+<body onload="checkAuthorization()">
+    <nav class="navbar navbar-expand-lg navbar-light " id="scrollNav">
+        <a class="navbar-brand" href="./">AI Projects</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedCon"
+            aria-controls="navbarSupportedCon" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedCon">
+            <ul class="navbar-nav ml-auto">
+                <li class=" nav-item active">
+                    <a class=" nav-link" href="./">Home <span class="sr-only">(current)</span></a>
+                </li>
+
+                <li class="nav-item">
+                    <a class=" nav-link" href="/login.html">Login</a>
+                </li>
+                
+
+            </ul>
+
+        </div>
+    </nav>
+    <nav class="navbar navbar-expand-lg navbar-light navbar-dark" id="fixedNav">
+        <a class="navbar-brand" href="./index.html">AI Projects</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedCon"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon" onclick="setmargin()"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class=" nav-item active">
+                    <a class=" nav-link" href="./">Home <span class="sr-only">(current)</span></a>
+                </li>
+
+                <li class="nav-item">
+                    <a class=" nav-link" href="/login.html">Login</a>
+                </li>
+                
+
+            </ul>
+
+        </div>
+
+    </nav>
+    <div class="hero" style="height:40vh">
+        <div class="overlay"></div>
+        <div class="content">
+
+            <h1 class="display-1 text-center text-white"><b>Register</b> </h1>
+
+
+        </div>
+        <div class="lower">
+            <br/>
+            <a href="#login"> <i class="fa fa-arrow-alt-circle-down text-white "></i> </a>
+        </div>
+    </div>
+    <section id="login" class="container">
+        <div class="row  mb-5 mt-5">
+            <div class="col-lg-3"></div>
+            <div class="col-lg-6">
+                <div class="productWrapper card p-4 text-center shadow-drk" >
+                    <h2>Register FORM</h2>
+                    <div class="card-body" >
+                        <form  onsubmit="auth(event, 'register')">
+                            <div class="form-group input-group">
+                                <div class="input-group-prepend bg-success text-white pl-3 pr-3 pt-2" style="font-size:20px"><i class="fa fa-envelope" ></i></div>
+                                <input type="email"  name="username" id="email" placeholder="Enter email" class="form-control" required/>
+                            </div>
+                            
+                            
+                            <div class="form-group input-group">
+                                <div class="input-group-prepend bg-success text-white pl-3 pr-3 pt-2" style="font-size:20px"><i class="fa fa-key" ></i></div>
+                                <input  type="password" name="password" id="password" placeholder="Enter password" class="form-control" required />
+                            </div>
+                            <button class="btn btn-outline-success"> Register</button>
+                            <br />
+                            <a class="btn btn-link" href="./login.html"> Already Registered User? Click to Login </a>
+    
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3"></div>
+        </div>
+    </section>
+    <script src="./assets/js/auth.js"></script>
+    <script src="./assets/js/main.js"></script>
+</body>
+
+</html>
